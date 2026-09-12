@@ -17,4 +17,4 @@ A dynamic React application built using NASA's Open API (APOD) to fetch and expl
 
 * Thank you 👍
 * Now you can enjoy this code.
-* Just "npm eun dev"😉
+* Just "npm run dev"😉
