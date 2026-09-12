@@ -8,7 +8,6 @@ export function Mars() {
 
   function LoadData() {
     setLoading(true);
-    // count=12 मुळे API एकाच वेळी 12 फोटोचा Array रिटर्न करेल
     axios
       .get(`https://api.nasa.gov/planetary/apod?api_key=${apiKey}&count=12`)
       .then((response) => {
@@ -29,7 +28,7 @@ export function Mars() {
     return (
       <div className="container mt-5 text-center">
         <div className="spinner-border text-primary" role="status"></div>
-        <h5 className="mt-2">NASA Photos Load होत आहेत...</h5>
+        <h5 className="mt-2">Astro Pic's loading...</h5>
       </div>
     );
   }
@@ -38,7 +37,6 @@ export function Mars() {
     <div className="container my-4">
       <div className="d-flex justify-content-between align-items-center mb-4">
         <h2>Astronomy Picture Collection</h2>
-        {/* नवीन फोटो लोड करण्यासाठी बटण */}
         <button onClick={LoadData} className="btn btn-primary">
           Reload New Photos
         </button>
@@ -68,7 +66,6 @@ export function Mars() {
                 <h5 className="card-title text-truncate">{item.title}</h5>
                 <p className="card-subtitle mb-2 text-muted font-monospace">{item.date}</p>
                 
-                {/* 3 ओळींनंतर Text Cut होईल */}
                 <p
                   className="card-text text-secondary small"
                   style={{
